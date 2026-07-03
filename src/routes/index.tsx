@@ -107,15 +107,24 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="inicio" className="relative min-h-screen pt-16 overflow-hidden">
+    <section
+      id="inicio"
+      className="relative min-h-screen pt-16 overflow-hidden"
+      style={{
+        backgroundImage: `url(${heroImage.url})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/55" aria-hidden />
       <div className="absolute inset-0 bg-grid opacity-40" aria-hidden />
       <div
         className="absolute inset-0"
         style={{ background: "radial-gradient(ellipse at 70% 40%, oklch(0.55 0.25 25 / 0.25), transparent 60%)" }}
         aria-hidden
       />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
-        <div className="order-2 lg:order-1">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-24 grid lg:grid-cols-1 gap-12 items-center">
+        <div className="max-w-xl">
           <p className="text-xs font-bold tracking-[0.3em] text-primary mb-4">DISCORD BOT</p>
           <h1 className="font-display font-bold leading-[0.85] tracking-tight text-[clamp(4rem,14vw,10rem)]">
             <span className="text-foreground">C</span>
@@ -158,20 +167,6 @@ function Hero() {
               <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
-        </div>
-        <div className="order-1 lg:order-2 relative">
-          <div
-            className="absolute inset-0 blur-3xl opacity-60"
-            style={{ background: "var(--gradient-red-radial)" }}
-            aria-hidden
-          />
-          <img
-            src={heroImage.url}
-            alt="CVL bot mascota con aura roja"
-            width={1024}
-            height={1024}
-            className="relative w-full max-w-lg mx-auto"
-          />
         </div>
       </div>
       <a
