@@ -20,9 +20,8 @@ import {
 import heroImage from "@/assets/hero-cvl.png.asset.json";
 
 const CLIENT_ID = "1520827628699910184";
-const SUPPORT_SERVER_ID = "1518363005581266954";
 const INVITE_URL = `https://discord.com/oauth2/authorize?client_id=${CLIENT_ID}&scope=bot+applications.commands&permissions=8`;
-const SUPPORT_URL = `https://discord.com/servers/${SUPPORT_SERVER_ID}`;
+const SUPPORT_URL = "https://discord.gg/a8YgjbwyMs";
 
 export const Route = createFileRoute("/")({
   component: Index,
