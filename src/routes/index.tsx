@@ -115,13 +115,7 @@ function Hero() {
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-black/55" aria-hidden />
-      <div className="absolute inset-0 bg-grid opacity-40" aria-hidden />
-      <div
-        className="absolute inset-0"
-        style={{ background: "radial-gradient(ellipse at 70% 40%, oklch(0.55 0.25 25 / 0.25), transparent 60%)" }}
-        aria-hidden
-      />
+      <div className="absolute inset-0 bg-black/30" aria-hidden />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-24 grid lg:grid-cols-1 gap-12 items-center">
         <div className="max-w-xl">
           <p className="text-xs font-bold tracking-[0.3em] text-primary mb-4">DISCORD BOT</p>
