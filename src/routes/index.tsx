@@ -17,7 +17,7 @@ import {
   UserMinus,
   Sliders,
 } from "lucide-react";
-import heroImage from "@/assets/hero-cvl.png.asset.json";
+import heroImage from "@/assets/hero-cvl.png";
 
 const CLIENT_ID = "1520827628699910184";
 const INVITE_URL = `https://discord.com/oauth2/authorize?client_id=${CLIENT_ID}&scope=bot+applications.commands&permissions=8`;
@@ -110,7 +110,7 @@ function Hero() {
       id="inicio"
       className="relative min-h-screen pt-16 overflow-hidden"
       style={{
-        backgroundImage: `url(${heroImage.url})`,
+        backgroundImage: `url(${heroImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
