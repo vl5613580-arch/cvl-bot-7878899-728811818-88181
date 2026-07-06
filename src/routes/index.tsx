@@ -449,6 +449,7 @@ function Index() {
         <Hero />
         <Features />
         <Commands />
+        <Setup />
         <Support />
       </main>
       <Footer />
