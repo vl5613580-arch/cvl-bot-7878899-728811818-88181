@@ -340,13 +340,19 @@ function Footer() {
           <span>L</span>
         </div>
         <p>© {new Date().getFullYear()} CVL Bot · Todos los derechos reservados.</p>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           <a href={INVITE_URL} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
             Invitar
           </a>
           <a href={SUPPORT_URL} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
             Soporte
           </a>
+          <Link to="/terms" className="hover:text-primary transition-colors">
+            Términos de Servicio
+          </Link>
+          <Link to="/privacy" className="hover:text-primary transition-colors">
+            Política de Privacidad
+          </Link>
         </div>
       </div>
     </footer>
