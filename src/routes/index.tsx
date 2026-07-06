@@ -16,6 +16,11 @@ import {
   Trash2,
   UserMinus,
   Sliders,
+  UserPlus,
+  ShieldCheck,
+  ArrowUpCircle,
+  Terminal,
+  AlertTriangle,
 } from "lucide-react";
 import heroImage from "@/assets/hero-cvl.png";
 
