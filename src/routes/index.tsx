@@ -294,6 +294,83 @@ function Commands() {
   );
 }
 
+const setupSteps = [
+  {
+    icon: UserPlus,
+    title: "INVITA EL BOT",
+    desc: (
+      <>
+        Añade CVL a tu servidor usando el botón{" "}
+        <a href={INVITE_URL} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+          Invitar
+        </a>{" "}
+        de esta página.
+      </>
+    ),
+  },
+  {
+    icon: ShieldCheck,
+    title: "OTORGALE PERMISOS",
+    desc: "Asigna al rol del bot el permiso de Administrador para que pueda utilizar todas sus funciones correctamente.",
+  },
+  {
+    icon: ArrowUpCircle,
+    title: "ORDENA LOS ROLES",
+    desc: "Arrastra el rol del bot por encima de los roles que va a administrar. Si está por debajo, algunas funciones no se ejecutarán.",
+  },
+  {
+    icon: Terminal,
+    title: "ACTIVA LOS COMANDOS",
+    desc: "El propietario del servidor debe autorizar y sincronizar todos los comandos slash del bot para que estén disponibles para todos.",
+  },
+];
+
+function Setup() {
+  return (
+    <section id="configuracion" className="relative py-24 border-t border-border/40">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <p className="text-xs font-bold tracking-[0.3em] text-primary mb-3">CONFIGURACIÓN INICIAL</p>
+          <h2 className="font-display text-4xl sm:text-5xl font-bold tracking-wide">
+            CONFIGURACIÓN <span className="text-primary text-glow-red">INICIAL</span>
+          </h2>
+          <div className="mt-4 h-1 w-16 bg-primary mx-auto rounded-full" />
+          <p className="mt-6 text-muted-foreground max-w-xl mx-auto text-sm">
+            Sigue estos pasos para que el bot funcione correctamente en tu servidor.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {setupSteps.map((step, i) => {
+            const Icon = step.icon;
+            return (
+              <div
+                key={step.title}
+                className="relative bg-card border border-border rounded-lg p-6 pt-8 hover:border-primary/60 transition-all duration-300 hover:-translate-y-1"
+                style={{ boxShadow: "var(--shadow-card)" }}
+              >
+                <div className="absolute -top-5 left-6 w-10 h-10 rounded-full bg-primary border border-primary/50 flex items-center justify-center text-primary-foreground font-display font-bold shadow-glow">
+                  {i + 1}
+                </div>
+                <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center mb-4">
+                  <Icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-display text-sm font-bold tracking-wider mb-2">{step.title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{step.desc}</p>
+              </div>
+            );
+          })}
+        </div>
+        <div className="mt-10 flex items-start gap-4 rounded-lg border border-primary/40 bg-primary/[0.05] p-5">
+          <AlertTriangle className="w-6 h-6 text-primary shrink-0" />
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Si alguno de estos pasos no se completa, algunas funciones del bot podrían no funcionar correctamente.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Support() {
   return (
     <section id="soporte" className="relative py-24 border-t border-border/40 overflow-hidden">
